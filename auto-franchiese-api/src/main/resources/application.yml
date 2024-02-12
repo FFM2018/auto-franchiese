@@ -11,6 +11,4 @@ spring:
     console.enabled: true
     console.path: /h2-console    
   flyway:
-    locations: classpath:db/migration,classpath:db/testedata
-     
-    
+    locations: classpath:db/migration
