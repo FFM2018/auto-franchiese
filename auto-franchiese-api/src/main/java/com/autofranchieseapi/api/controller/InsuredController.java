@@ -1,4 +1,4 @@
-package com.autofranchieseapi.controller;
+package com.autofranchieseapi.api.controller;
 
 import java.util.List;
 
@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.autofranchieseapi.domain.model.Person;
+import com.autofranchieseapi.domain.model.Insured;
 import com.autofranchieseapi.domain.repository.PersonRepository;
 
 @RestController
-@RequestMapping(path = "/v1/person")
-public class PersonController {
+@RequestMapping(path = "/v1/insured")
+public class InsuredController {
 
 	@Autowired
 	private PersonRepository personRepository;
@@ -23,7 +23,7 @@ public class PersonController {
 	}
 	
 	@GetMapping
-	public List<Person> getPersons(){
+	public List<Insured> getInsured(){
 		return personRepository.findAll();
 	}
 }
